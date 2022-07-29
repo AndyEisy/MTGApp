@@ -5,8 +5,8 @@ import com.google.gson.annotations.SerializedName
 class Card {
 
     @SerializedName("name")
-    private val cardName: String? = null
+    val cardName: String? = null
 
     @SerializedName("cmc")
-    private val convertedManaCost: Int? = null
+    val convertedManaCost: Int? = null
 }

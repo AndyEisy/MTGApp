@@ -4,5 +4,5 @@ import com.google.gson.annotations.SerializedName
 
 class CardResponse {
     @SerializedName("cards")
-    private val cards: List<Card>? = null
+    val cards: List<Card>? = null
 }

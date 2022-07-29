@@ -8,10 +8,12 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Get the cards from internet
         callGetCards()
     }
 
@@ -24,8 +26,10 @@ class MainActivity : AppCompatActivity() {
             call.enqueue(object : Callback<CardResponse> {
 
                 override fun onResponse(call: Call<CardResponse>, response: Response<CardResponse>) {
-                    val test = response
-                    test
+                    val responseCards = response.body()?.cards
+                    responseCards?.let { magicCards ->
+                        doSomethingWithCardData(magicCards)
+                    }
                 }
 
                 override fun onFailure(call: Call<CardResponse>, t: Throwable) {
@@ -34,5 +38,10 @@ class MainActivity : AppCompatActivity() {
                 }
             })
         }
+    }
+
+    private fun doSomethingWithCardData(card: List<Card>) {
+        val testName = card.first().cardName
+        testName
     }
 }
