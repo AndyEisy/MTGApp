@@ -9,4 +9,8 @@ class Card {
 
     @SerializedName("cmc")
     val convertedManaCost: Int? = null
+
+    @SerializedName("colors")
+    val colors: String? = null
+
 }
