@@ -11,6 +11,6 @@ class Card {
     val convertedManaCost: Int? = null
 
     @SerializedName("colors")
-    val colors: String? = null
+    val colors: ArrayList<String>? = null
 
 }

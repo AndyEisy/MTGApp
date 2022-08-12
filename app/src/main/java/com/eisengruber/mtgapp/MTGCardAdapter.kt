@@ -28,7 +28,7 @@ class MTGCardAdapter(
         var card = cardList[position]
         holder.textViewCardName.text = card.cardName
         holder.textViewCMCList.text = card.convertedManaCost.toString()
-        holder.textViewColors.text = card.colors
+        holder.textViewColors.text = card.colors.toString()
     }
 
     override fun getItemCount(): Int {
