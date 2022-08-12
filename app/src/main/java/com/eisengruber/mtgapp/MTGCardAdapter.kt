@@ -16,7 +16,10 @@ class MTGCardAdapter(
 
         var textViewCardName : TextView = itemView.findViewById(R.id.textViewCardName)
         var textViewCMCList : TextView = itemView.findViewById(R.id.textViewCMC)
-        var textViewColors: TextView = itemView.findViewById(R.id.textViewColors)
+        var textViewColors : TextView = itemView.findViewById(R.id.textViewColors)
+        var textViewManaCost : TextView = itemView.findViewById(R.id.textViewManaCost)
+        var textViewType : TextView = itemView.findViewById(R.id.textViewType)
+        var textViewText : TextView = itemView.findViewById(R.id.textViewText)
 
     }
 
@@ -29,6 +32,12 @@ class MTGCardAdapter(
         holder.textViewCardName.text = card.cardName
         holder.textViewCMCList.text = card.convertedManaCost.toString()
         holder.textViewColors.text = card.colors.toString()
+        holder.textViewManaCost.text = card.manaCost
+        holder.textViewType.text = card.type
+        holder.textViewText.text = card.text
+
+
+
     }
 
     override fun getItemCount(): Int {

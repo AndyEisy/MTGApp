@@ -19,41 +19,142 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="300dp">
 
             <TextView
                 android:id="@+id/textViewCardName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/textViewCMC"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewCMCTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Converted Mana Cost: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewCMC"
+                app:layout_constraintStart_toStartOf="@+id/textViewColorsTag" />
 
             <TextView
                 android:id="@+id/textViewCMC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
                 android:text="TextView"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewCardName" />
+                app:layout_constraintStart_toEndOf="@+id/textViewCMCTag"
+                app:layout_constraintTop_toBottomOf="@+id/textViewColors" />
+
+            <TextView
+                android:id="@+id/textViewColorsTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Colors: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewColors"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textViewColors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="39dp"
+                android:layout_marginTop="8dp"
                 android:text="TextView"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textViewCMC"
+                app:layout_constraintStart_toEndOf="@+id/textViewColorsTag"
                 app:layout_constraintTop_toBottomOf="@+id/textViewCardName" />
+
+            <TextView
+                android:id="@+id/textViewManaCostTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mana Cost: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewManaCost"
+                app:layout_constraintEnd_toEndOf="@+id/textViewTypeTag"
+                app:layout_constraintStart_toEndOf="@+id/textViewTypeTag" />
+
+            <TextView
+                android:id="@+id/textViewManaCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewManaCostTag"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCMCTag" />
+
+            <TextView
+                android:id="@+id/textViewTypeTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Type: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewType"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewTypeTag"
+                app:layout_constraintTop_toBottomOf="@+id/textViewManaCostTag" />
+
+            <TextView
+                android:id="@+id/textViewRarityTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rarity: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewRarity"
+                app:layout_constraintStart_toStartOf="@+id/textViewTypeTag" />
+
+            <TextView
+                android:id="@+id/textViewRarity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewRarityTag"
+                app:layout_constraintTop_toBottomOf="@+id/textViewType" />
+
+            <TextView
+                android:id="@+id/textViewTextTap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="1dp"
+                android:text="Text: "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/textViewText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRarityTag" />
+
+            <TextView
+                android:id="@+id/textViewText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textViewTextTap"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRarityTag" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

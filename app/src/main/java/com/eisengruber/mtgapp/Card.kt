@@ -13,4 +13,13 @@ class Card {
     @SerializedName("colors")
     val colors: ArrayList<String>? = null
 
+    @SerializedName("manaCost")
+    val manaCost: String? = null
+
+    @SerializedName("type")
+    val type: String? = null
+
+    @SerializedName("text")
+    val text: String? = null
+
 }
