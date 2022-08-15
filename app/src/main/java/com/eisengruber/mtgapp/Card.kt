@@ -22,4 +22,7 @@ class Card {
     @SerializedName("text")
     val text: String? = null
 
+    @SerializedName("imageUrl")
+    val image: String? = null
+
 }

@@ -156,6 +156,19 @@
                 app:layout_constraintStart_toEndOf="@+id/textViewTextTap"
                 app:layout_constraintTop_toBottomOf="@+id/textViewRarityTag" />
 
+            <ImageView
+                android:id="@+id/imageViewCardImage"
+                android:layout_width="129dp"
+                android:layout_height="145dp"
+                android:layout_margin="15dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textViewCMC"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
