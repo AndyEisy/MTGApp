@@ -48,7 +48,7 @@ class SearchFragment: Fragment(R.layout.search_fragment) {
     }
 
     private fun doSomethingWithCardData(cards: List<Card>) {
-        val adapter = MTGCardAdapter(cards, requireActivity().applicationContext)
+        val adapter = MTGCardAdapter(requireActivity() as MainActivity, cards, requireActivity().applicationContext)
         recyclerView.adapter = adapter
     }
 }

@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
 class MTGCardAdapter(
+    var activity: MainActivity,
     var cardList: List<Card>,
     var context: Context) : Adapter<MTGCardAdapter.CardViewHolder>() {
 
@@ -35,6 +36,14 @@ class MTGCardAdapter(
         holder.textViewManaCost.text = card.manaCost
         holder.textViewType.text = card.type
         holder.textViewText.text = card.text
+
+        holder.itemView.setOnClickListener {
+            activity
+                .supportFragmentManager
+                .beginTransaction()
+                .replace()
+                .commit()
+        }
         
 
 //        for (i in 0 until cardList.colors.size) {
