@@ -14,7 +14,6 @@ class MTGCardAdapter(
     var context: Context) : Adapter<MTGCardAdapter.CardViewHolder>() {
 
     class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-
         var textViewCardName : TextView = itemView.findViewById(R.id.textViewCardName)
         var textViewCMCList : TextView = itemView.findViewById(R.id.textViewCMC)
         var textViewColors : TextView = itemView.findViewById(R.id.textViewColors)
@@ -22,12 +21,10 @@ class MTGCardAdapter(
         var textViewType : TextView = itemView.findViewById(R.id.textViewType)
         var textViewText : TextView = itemView.findViewById(R.id.textViewText)
         var imageViewCardImage : ImageView = itemView.findViewById(R.id.imageViewCardImage)
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
-        return CardViewHolder(LayoutInflater.from(context).inflate(R.layout.card_design,parent,false))
+        return CardViewHolder(LayoutInflater.from(context).inflate(R.layout.card_design, parent, false))
     }
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
